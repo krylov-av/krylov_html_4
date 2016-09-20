@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+<style>
+*{
+	margin: 0px;
+	padding: 0px;
+	font-family: Tahoma, Verdana, Segoe, sans-serif; font-size: 12px;
+	color:#5fa5bb;
+}
+.level1{
+	background-color: #128aa7;
+	height: 28px;
+}
+.level2{
+	background-color: #5ef0ff;
+	height: 1px;
+}
+.level3{
+	height: 146px;
+	background: #11cde1; /* Old browsers */
+	background: -moz-linear-gradient(top, #11cde1 0%, #ffffff 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #11cde1 0%,#ffffff 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #11cde1 0%,#ffffff 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#11cde1', endColorstr='#ffffff',GradientType=0 ); /* IE6-9 */
+}
+.level4{
+	height:850px;
+	background: #40c6d3;
+	background: -moz-linear-gradient(top, #11cde1 0%, #0c73a0 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, #11cde1 0%,#0c73a0 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, #11cde1 0%,#0c73a0 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#11cde1', endColorstr='#0c73a0',GradientType=0 ); /* IE6-9 */
+	position:relative;
+	text-align: center;
+}
+.level4 p{
+	position:absolute;
+	bottom: 0px;
+	color:white;
+	vertical-align: bottom;
+	display: inline-block;
+	/*vertical-align: text-bottom;*/
+}
+.wrapper{
+	top: 0px;
+	left: 0px;
+	width: 100%;
+	position:absolute;
+}
+.stripe{
+	background-color: #fff;
+	width:1000px;
+	height:1000px;
+	margin:0 auto;
+}
+.header{
+	position:relative;
+	border-bottom:1px solid gray;
+	padding-bottom: 5px;
+	display:flex;
+	flex-flow: column wrap;
+	justify-content: space-between;
+	align-items: flex-end;
+	height: 170px;
+}
+.header #logo{
+	width:286px;
+}
+.contacts{
+	height: 81px;
+	width: 167px;
+	margin-top: 10px;
+}
+.countries{
+	width: 710px;
+	display: flex;
+	justify-content: flex-start;
+	flex-flow: row-reverse;
+	font-size: 10px;
+}
+.countries figure{
+	text-align: center;
+	width: 75px;
+}
+nav ul{
+	display: flex;
+	list-style: none; 
+	background-color: #323232;
+	/*padding: 5px;*/
+	border-top:1px solid #138aa7;
+	border-bottom:1px solid black;
+	margin-top: -3px;
+}
+nav ul li{
+	margin-left: 25px;
+	position:relative;
+	color:white;
+	font-size: 14px;
+	padding:5px 20px;
+}
+nav ul li a{
+	text-decoration: none;
+	color:white;
+	font-size: 14px;
+}
+nav ul li:hover{
+	cursor: pointer;
+	background-color: #454545;
+}
+nav ul li:hover>ol{
+	display:block;
+}
+/*
+nav ul li>a:after{
+	content:'>>';
+}*/
+nav ul li>a:not(:only-child):after{
+   content: ' ▾';
+}
+
+nav ol{
+	margin-top:5px;
+	position:absolute;
+	list-style: none;
+	background-color: #323232;
+	display: none;
+}
+nav ol li{
+	margin-left:0px;
+}
+
+.container{
+	  display:flex;
+    flex-wrap:nowrap;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:stretch;
+    border:1px dotted blue;
+}
+.left {
+        min-width:208px;
+        background:#edeef0;
+    }
+ .middle {
+        background:white;
+        min-width:580px;
+    }
+    .right {
+			min-width:208px;
+        background:#edeef0;
+    }
+    h2{
+    	font-size: 18px;
+		color: #424c43;
+		font-weight: unset;
+		text-align: center;
+    }
+    .container p, .container a{
+    	font-size: 14px;
+    	color:#424c43;
+    	text-decoration: none;
+    	margin: 6px 8px;
+    }
+/*
+.container{
+	  display:flex;
+    flex-wrap:wrap;
+    flex-direction:row;
+    justify-content:flex-start;
+    align-items:stretch;
+}
+.left {order:1; background:red; flex-basis:100%; height:300px}
+.middle {order:3; background: green;flex-basis:100%; height:300px;}
+.right {order:2; background:yellow;flex-basis:100%; height:300px;}
+@media screen and (min-width:1020px) {
+   .container {
+       flex-wrap:nowrap;
+   } 
+
+    .left {
+        flex-basis:200px;
+        order:1;
+    }
+    .middle {
+        flex-basis:1;
+        order:2;
+    }
+    .right {
+        flex-basis:200px;
+        order:3;
+    }
+}*/
+
+</style>
+</head>
+<body>
+<!--background -->
+<div class="level1"></div><!--monocolor-->
+<div class="level2"></div><!--line-->
+<div class="level3"></div><!--gradient-->
+<div class="level4"><p>Copyright(C) asia-holidays.com. 2010</p></div>
+<!--end of background-->
+
+<div class="wrapper">
+	<div class="stripe">
+		<div class="header">
+			<img id="logo" src="img/logo_asia.gif">
+			<div class="contacts"><b>Наши контакты</b><br>+9-098-765-4321<br>+9-0123-456-890<br><a href="mailto:info@asia-holidays.com">info@asia-holidays.com</a></div>
+			<div class="countries">
+				<figure>
+					<img src="img/maldivy.gif">
+					<a href="#">Мальдивы</a>
+				</figure>
+				<figure>
+					<img src="img/shri-lanka.gif">
+					<a href="#">Шри-Ланка</a>
+				</figure>
+				<figure>
+					<img src="img/butan.gif">
+					<a href="#">Бутан</a>
+				</figure>
+				<figure>
+					<img src="img/tibet.gif">
+					<a href="#">Тибет</a>
+				</figure>
+				<figure>
+					<img src="img/nepal.gif">
+					<a href="#">Непал</a>
+				</figure>
+				<figure>
+					<img src="img/india.gif">
+					<a href="#">Индия</a>
+				</figure>
+			</div>
+		</div>
+		<img src="img/photo.jpg">
+		<nav>
+			<ul>
+				<li><a href="#">Главная</a></li>
+				<li><a href="#">Путешествие</a>
+					<ol>
+						<li><a href="#">Путешествие1</a></li>
+						<li><a href="#">Путешествие2</a></li>
+						<li><a href="#">Путешествие3</a></li>
+						<li><a href="#">Путешествие4</a></li>
+						<li><a href="#">Путешествие5</a></li>
+					</ol>
+				</li>
+				<li><a href="#">Услуги</a>
+					<ol>
+						<li><a href="#">Услуга1</a></li>
+						<li><a href="#">Услуга2</a></li>
+						<li><a href="#">Услуга3</a></li>
+						<li><a href="#">Услуга4</a></li>
+						<li><a href="#">Услуга5</a></li>
+					</ol>
+				</li>
+				<li><a href="#">Партнерам</a>
+					<ol>
+						<li><a href="#">Правила&nbsp;сотрудничества</a></li>
+						<li><a href="#">Куда&nbsp;отправлять&nbsp;жалобы</a></li>
+						<li><a href="#">Где&nbsp;держать&nbsp;свое&nbsp;мнени</a>е</li>
+						<li><a href="#">Как&nbsp;себя&nbsp;держать&nbsp;в&nbsp;руках</a></li>
+						<li><a href="#">Почему&nbsp;меня&nbsp;послали</a></li>
+					</ol>
+				</li>
+				<li><a href="#">Отзывы клиентов</a></li>
+				<li><a href="#">О нас</a></li>
+				<li><a href="#">Контакты</a></li>
+			</ul>
+		</nav>
+		<div class=container>
+			<div class="left"><h2>Информация</h2>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p></div>
+			<div class="middle">
+				<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Fuga, aliquam earum dolore labore consequatur distinctio vitae cupiditate atque nulla accusamus quos. Iusto minus consectetur expedita, perspiciatis ab delectus voluptates deleniti!</p>
+			</div>
+			<div class="right"><h2>Новости</h2>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+				<p><a href="#">Lorem ipsum dolor sit amet</a></p>
+			</div>
+		</div>
+	</div>
+</div>
+</body>
+</html>
